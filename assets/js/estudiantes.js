@@ -1,4 +1,5 @@
 let arrayListaEstudiantes = [];
+console.log(arrayListaEstudiantes);
 
 $('#generarImput').click(generarImput);
 $('#mostrarLista').click(mostraListaEstudiantes);
@@ -12,7 +13,7 @@ function generarImput(e) {
 
 function agregarEstudiante() {
     console.log("agregarEstuadiante")
-    var estudiante = {
+    let estudiante = {
         nombre: $('#nombre').val(),
         puntosHse: $('#puntoHse').val()
     };
@@ -20,14 +21,19 @@ function agregarEstudiante() {
     console.log(arrayListaEstudiantes)
 }
 
-function getFullName(item, index) {
-    var fullname = [item.nombre, item.puntosHse].join(" ");
-}
-
-function mostraListaEstudiantes() {
+function mostraListaEstudiantes(l) {
+    arrayListaEstudiantes.map((elemento)=>{
+       
+        $('#divMostrarLista').append(`<p> Nombre: ${elemento.nombre}`,`<p>PuntosHse: ${ elemento.puntosHse}</p>`)
+    });
     console.log('entro')
-    $('divMostrarLista').append(arrayListaEstudiantes.map(getFullName));
 }
 
-arrayListaEstudiantes.toString();
-$('divMostrarLista').append(arrayListaEstudiantes)
+// function mostraListaEstudiantes() {
+//     arrayListaEstudiantes.map((elemento)=>{
+       
+//         $('#divMostrarLista').append(`<p>${elemento.nombre}---${ elemento.puntosHse}</p>`)
+//     });
+//     console.log('entro')
+// }
+
