@@ -9,12 +9,16 @@ body{
     background-size: 100%;
 }
 
+p{
+    text-align: left;
+}
+
+
 .contenedor{
 background-image: url("../img/fondo.jpg");
 background-repeat: no-repeat;
-background-size: 100%;
-width: 100%;
-height: 100vh;
+background-size: cover;
+height: 700px;
 width: 80%;
 margin: auto;
 }
@@ -32,10 +36,17 @@ margin: auto;
     margin-top: 0%;;
 }
 
+
+
 .btn{
     margin: 1%;
 }
 
+div .divMostrarLista{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
 
 
 
