@@ -24,7 +24,7 @@ function agregarEstudiante() {
 function mostraListaEstudiantes(l) {
     arrayListaEstudiantes.map((elemento)=>{
        
-        $('#divMostrarLista').append(`<p>${elemento.nombre}---${ elemento.puntosHse}</p>`)
+        $('#divMostrarLista').append(`<p> Nombre: ${elemento.nombre}`,`<p>PuntosHse: ${ elemento.puntosHse}</p>`)
     });
     console.log('entro')
 }
